@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+<script type = "text/javascript" src = "Histogram.js">
+
+</script>
+
+</head>
+
+<body>
+
+<table style="font-size: 16px; ">
+  <tr>
+    <td>Group By</td>
+    <td>
+      <select name = "s1" id='query-1' onChange = "Validate();">
+      <option value=''>None</option>
+      <option value='E'>State</option>
+      <option value='G'>Political Party</option>
+      <option value='I'>Education Qualification</option>
+      <option value='H'>Gender</option>
+      </select>
+    </td>
+    <td>Aggregate Function 1</td>
+    <td>
+      <select name = "s2" id='query-2' disabled = "true" onChange = "Validate();">
+      <option value=''>None</option>
+      <option value='avg(K)'>Age</option>
+      <option value='avg(O)'>Attendance</option>
+      <option value='avg(L)'>Debates</option>
+      <option value='avg(N)'>Questions</option>
+      <option value='avg(M)'>Private Member Bills</option>
+    </select>
+    </td>
+    <td>Aggregate Function 2</td>
+    <td>
+      <select name = "s3" id='query-3' disabled = "true" onChange = "Validate();">
+      <option value=''>None</option>
+      <option value='avg(K)'>Age</option>
+      <option value='avg(O)'>Attendance</option>
+      <option value='avg(L)'>Debates</option>
+      <option value='avg(N)'>Questions</option>
+      <option value='avg(M)'>Private Member Bills</option>
+    </select>
+    </td>
+   <td>Visualization Type</td>
+    <td>
+      <select name = "s4" id='query-4' onChange = "Validate();">
+      <option value=''>None</option>
+      <option value= "BarChart" >Bar Chart</option>
+      <option value= "ColumnChart" >Column Chart</option>
+      <option value= "BubbleChart" id = "q-5" >Bubble Chart</option>
+    </select>
+    </td>
+   <td>
+   <input type="button" value="Go" onclick="setQuery(document.getElementById('query-1').value,document.getElementById('query-2').value,document.getElementById('query-3').value,document.getElementById('query-4').value);" />
+   </td>
+  </tr>
+    
+</table>
+
+<div id = "dashboard_div">
+	<div id = "filter_div"></div>
+	<div id = "chart_div"></div>
+</div>
+
+</body>
+
+</html>

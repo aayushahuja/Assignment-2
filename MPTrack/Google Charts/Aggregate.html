@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+<script type = "text/javascript" src = "Aggregate.js">
+
+</script>
+
+</head>
+
+<body>
+<table>
+<tr>
+<td>Select Filter</td>
+    <td>
+      <select name = "s-1" id='s-1' onChange = "Validate();" >
+      <option value=''>None</option>
+      <option value='E'>State</option>
+      <option value='G'>Political Party</option>
+      <option value='I'>Education Qualification</option>
+    </select>
+    </td>
+<td>Select Aggregate</td>
+    <td>
+      <select name = "s-2" id='s-2' onChange = "Validate();" >
+      <option value=''>None</option>
+      <option id = "O-1" value='E'>State</option>
+      <option id = "O-2" value='G'>Polical Party</option>
+      <option id = "O-3" value='I'>Education Qualification</option>
+    </select>
+    </td>
+<td>Select Visualization</td>
+    <td>
+      <select name = "s-3" id='s-3' >
+      <option value=''>None</option>
+      <option  value='PieChart'>Pie Chart</option>
+      <option  value='BarChart'>Bar Chart</option>
+      <option  value='ColumnChart'>Column Chart</option>
+    </select>
+    </td>
+   <td>
+   <input type="button" id = "b-1" value="Go"  onClick = "setQuery(document.getElementById('s-1').value,document.getElementById('s-2').value,document.getElementById('s-3').value);"/>
+   </td>
+</tr>
+</table>
+<div id = "dashboard_div">
+	<div id = "filter_div"></div>
+	<div id = "chart_div"></div>
+</div>
+<div id = "table_div"></div>
+</body>
+
+</html>

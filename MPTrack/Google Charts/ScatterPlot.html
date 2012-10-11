@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<script type = "text/javascript" src = "https://www.google.com/jsapi"></script>
+<script type = "text/javascript" src = "ScatterPlot.js">
+</script>
+
+</head>
+
+<body>
+
+<table style="font-size: 16px; ">
+  <tr>
+    <td>Parameter A</td>
+    <td>
+      <select name = "s2" id='query-2'>
+      <option value=''>None</option>
+      <option value='K'>Age</option>
+      <option value='O'>Attendance</option>
+      <option value='L'>Debates</option>
+      <option value='N'>Questions</option>
+      <option value='M'>Private Member Bills</option>
+    </select>
+    </td>
+    <td>Parameter B</td>
+    <td>
+      <select name = "s3" id='query-3' >
+      <option value=''>None</option>
+      <option value='K'>Age</option>
+      <option value='O'>Attendance</option>
+      <option value='L'>Debates</option>
+      <option value='N'>Questions</option>
+      <option value='M'>Private Member Bills</option>
+    </select>
+    </td>
+    <td>
+	<input type="button" value="Go" onclick="setQuery(document.getElementById('query-2').value,document.getElementById('query-3').value);" />
+   </td>
+  </tr>
+</table>
+
+<div id = "dashboard_div">
+	<div id = "filter_div"></div>
+	<div id = "filter_div1"></div>
+	<div id = "chart_div" ></div>
+</div>
+</body>
+
+</html>
